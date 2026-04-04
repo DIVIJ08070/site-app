@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { AuthProvider } from './context/AuthContext';
 import { ProtectedRoute } from './components/layout/ProtectedRoute';
 
 // Auth Pages
@@ -16,7 +15,6 @@ import { ManageAuditorsPage } from './pages/ManageAuditorsPage';
 export const App: React.FC = () => {
   return (
     <Router>
-      <AuthProvider>
         <Routes>
           {/* Auth Routes */}
           <Route path="/login" element={<LoginPage />} />
@@ -45,7 +43,6 @@ export const App: React.FC = () => {
           {/* Default route */}
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
         </Routes>
-      </AuthProvider>
     </Router>
   );
 };

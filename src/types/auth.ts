@@ -38,7 +38,7 @@ export interface AuthContextType {
   isAuthenticated: boolean;
   login: (email: string, password: string) => Promise<void>;
   logout: () => Promise<void>;
-  sendOTP: (email: string) => Promise<void>;
+  sendOTP: (email: string) => Promise<VerifyOTPResponse>;
   verifyOTP: (email: string, otp: string) => Promise<boolean>;
   setPassword: (email: string, newPassword: string) => Promise<void>;
 }

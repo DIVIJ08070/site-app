@@ -12,7 +12,7 @@ export const authService = {
     return response.data;
   },
 
-  async sendOTP(email: string): Promise<any> {
+  async sendOTP(email: string): Promise<VerifyOTPResponse> {
     const response = await axiosClient.post('/auth/send-otp', {
       email,
       purpose: 'forgotPassword',

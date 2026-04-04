@@ -3,7 +3,7 @@ import { Modal } from '../common/Modal';
 import { Input } from '../common/Input';
 import { Select } from '../common/Select';
 import { Button } from '../common/Button';
-import { Auditor, CreateAuditorRequest } from '../../types/auditor';
+import { CreateAuditorRequest } from '../../types/auditor';
 import { validators } from '../../utils/validators';
 
 interface AddAuditorModalProps {

@@ -26,6 +26,25 @@ export interface UpdateAuditorRequest extends CreateAuditorRequest {
   id: number;
 }
 
+export interface BackendAuditor {
+  id: number;
+  full_name: string;
+  email: string;
+  dob: string;
+  gender: string;
+  company_name: string;
+  phone: string;
+  created_at: string;
+  status: number;
+  is_password_created: number | boolean;
+}
+
+export interface BackendResponse<T> {
+  data: T;
+  message?: string;
+  status?: number;
+}
+
 export interface AuditorsListResponse {
   data: Auditor[];
   total: number;

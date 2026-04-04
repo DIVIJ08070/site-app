@@ -33,8 +33,8 @@ export const ForgotPasswordForm: React.FC<ForgotPasswordFormProps> = ({ onEmailS
   if (!validateForm()) return;
 
   try {
-    const result = await sendOTP(email);  // capture the response
-    console.log('OTP Response:', result); // 👈 logs whatever the API returns
+    const result = await sendOTP(email);  
+    console.log('OTP Response:', result); 
 
     onEmailSubmit(email);
     navigate('/verify-otp', { state: { email } });
